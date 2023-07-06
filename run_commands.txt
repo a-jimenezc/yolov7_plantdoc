@@ -1,0 +1,14 @@
+tf env in window cmd
+
+python train.py --epochs 1 --workers 1 --device 0 --batch-size 8 --data data/custom_data.yaml --img 640 640 --cfg cfg/training/yolov7_plantdoc-tiny.yaml --weights 'yolov7-tiny.pt' --name yolov7_tiny_plantdoc --hyp data/hyp.scratch.tiny.yaml
+
+python detect.py --weights best.pt --conf 0.1 --img-size 640 --source 1.jpg --view-img --no-trace
+
+python export.py --weights best.pt --grid --end2end --simplify --topk-all 100 --iou-thres 0.65 --conf-thres 0.1 --img-size 640 640 --max-wh 640
+
+
+# tiny model
+python export.py --weights yolov7-tiny.pt --grid --end2end --simplify --topk-all 100 --iou-thres 0.65 --conf-thres 0.35 --img-size 640 640 --max-wh 640
+
+# full model
+python export.py --weights yolov7.pt --grid --end2end --simplify --topk-all 100 --iou-thres 0.65 --conf-thres 0.35 --img-size 640 640 --max-wh 640
