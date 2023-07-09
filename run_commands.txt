@@ -4,7 +4,7 @@ python train.py --epochs 200 --workers 1 --device 0 --batch-size 16 --data data/
 
 python detect.py --weights best.pt --conf 0.1 --img-size 416 --source 1.jpg --view-img --no-trace
 
-python export.py --weights best.pt --grid --end2end --simplify --topk-all 100 --iou-thres 0.65 --conf-thres 0.1 --img-size 416 416 --max-wh 416
+python export.py --weights best_200epocs.pt --grid --end2end --simplify --topk-all 100 --iou-thres 0.65 --conf-thres 0.35 --img-size 416 416 --max-wh 416
 
 
 # tiny model
