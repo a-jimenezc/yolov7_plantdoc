@@ -3,11 +3,11 @@
 ## Description
 
 * This repository contains the training code for the [plant disease web page](https://github.com/a-jimenezc/plant-disease-app/tree/master).
-* Modified yaml files and custom data set was added to the original [yolo v7 implementation](https://github.com/WongKinYiu/yolov7) implementation.
+* Modified yaml files and a custom data set was added to the original [yolo v7 implementation](https://github.com/WongKinYiu/yolov7) implementation.
 
 ## Files added
 
-* Added *custom_data.yaml* in *data* folder. This file contains the location of the data for the plant desease app training. Also, it states the number of classes.
+* Added *custom_data.yaml* to *data* folder. This file contains the location of the data for the plant desease app training. Also, it states the number of classes.
 * Added *yolo7_plantdoc-tiny.yaml* file to *cfg/training* directory. It contains the architectural description of the model. In this case, the tiny version is used.
 * Added *yolov7-tiny.pt* weights, and used *data/hyp.scratch.tiny.yaml* for hyperparametes
 
